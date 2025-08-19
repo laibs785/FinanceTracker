@@ -38,7 +38,7 @@ const categoryIcons = {
 };
 
 const TransactionsPage = ({ transactions: propTransactions, updateTransaction, deleteTransaction }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [error, setError] = useState('');
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');

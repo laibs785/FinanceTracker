@@ -7,8 +7,8 @@ import {
   FiUser,
   FiMenu,
   FiX,
-  FiLogOut,
-  FiSettings,
+ 
+ 
 } from "react-icons/fi";
 import { MdOutlineSavings } from "react-icons/md";
 
