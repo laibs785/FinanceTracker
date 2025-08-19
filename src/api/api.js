@@ -1,16 +1,15 @@
-// src/api/api.js
+
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8000/api', // ✅ Correct: points to your backend
-  withCredentials: false, // ✅ Fine for JWT (we send token in headers)
+  baseURL: 'https://financetracker-production-529c.up.railway.app/api', 
+  withCredentials: false, 
 });
 
-// Interceptor: Add token to every request if user is logged in
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
-    config.headers.Authorization = `Bearer ${token}`; // ✅ Correct format
+    config.headers.Authorization = `Bearer ${token}`;  
   }
   return config;
 });
