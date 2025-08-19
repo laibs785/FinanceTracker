@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-// Update the baseURL with full deployed backend URL
+// ✅ Fixed: No spaces in baseURL
 const API = axios.create({
-baseURL: 'https://financetracker-production-529c.up.railway.app/api', 
-  withCredentials: false, 
+  baseURL: 'https://financetracker-production-529c.up.railway.app/api', // ✅ Correct
+  withCredentials: false,
 });
 
 // Add Authorization header if token exists in localStorage
