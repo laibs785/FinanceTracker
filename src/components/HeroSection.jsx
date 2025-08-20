@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden px-4">
+    <section className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden  px-4 pt-24  md:pt-0">
       
       
       <div className="absolute inset-0 overflow-hidden">
@@ -30,7 +30,7 @@ const HeroSection = () => {
         
         {/* Left Side: Text & CTA */}
         <div className="text-left space-y-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight ">
             Take Control of Your
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Finances</span>
           </h1>
