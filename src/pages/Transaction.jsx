@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import {
   FiDollarSign,
@@ -159,26 +158,26 @@ const TransactionsPage = ({ transactions: propTransactions, updateTransaction, d
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
         <SummaryCard
           title="Total Balance"
-          value={`₹${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}
+          value={`$${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}
           icon={<FiDollarSign />}
           color="from-cyan-500/20 to-blue-600/20"
           subText={
             <>
-              <span className="text-green-400">+₹{totalIncome.toLocaleString()}</span> •{' '}
-              <span className="text-red-400">-₹{totalExpenses.toLocaleString()}</span>
+              <span className="text-green-400">+${totalIncome.toLocaleString()}</span> •{' '}
+              <span className="text-red-400">-${totalExpenses.toLocaleString()}</span>
             </>
           }
         />
         <SummaryCard
           title="Income"
-          value={`+₹${totalIncome.toLocaleString()}`}
+          value={`+${totalIncome.toLocaleString()}`}
           icon={<FiTrendingUp />}
           color="from-green-500/20 to-emerald-600/20"
           subText="This month"
         />
         <SummaryCard
           title="Expenses"
-          value={`-₹${totalExpenses.toLocaleString()}`}
+          value={`-${totalExpenses.toLocaleString()}`}
           icon={<FiTrendingDown />}
           color="from-red-500/20 to-pink-600/20"
           subText="This month"
@@ -332,7 +331,7 @@ const TransactionsPage = ({ transactions: propTransactions, updateTransaction, d
                         <span className={`font-bold text-lg ${
                           transaction.type === 'income' ? 'text-green-400' : 'text-red-400'
                         }`}>
-                          {transaction.type === 'income' ? '+' : '-'}₹{transaction.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                          {transaction.type === 'income' ? '+' : '-'}${transaction.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                         </span>
                       </div>
                       <div className="flex justify-between text-sm text-gray-400">
@@ -372,7 +371,7 @@ const TransactionsPage = ({ transactions: propTransactions, updateTransaction, d
                     <div className={`hidden md:flex md:col-span-2 justify-end font-bold text-lg ${
                       transaction.type === 'income' ? 'text-green-400' : 'text-red-400'
                     }`}>
-                      {transaction.type === 'income' ? '+' : '-'}₹{transaction.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                      {transaction.type === 'income' ? '+' : '-'}${transaction.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                     </div>
                     <div className="hidden md:flex md:col-span-1 justify-end space-x-3">
                       <button

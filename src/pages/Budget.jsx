@@ -211,13 +211,13 @@ const BudgetPageContent = () => {
         />
         <StatCard
           title="Total Budget"
-          value={`₹${totalBudget.toLocaleString()}`}
+          value={`$${totalBudget.toLocaleString()}`}
           icon={<FiDollarSign className="text-purple-400" />}
           color="from-purple-500/20 to-pink-600/20"
         />
         <StatCard
           title="Total Spent"
-          value={`₹${totalSpent.toLocaleString()}`}
+          value={`$${totalSpent.toLocaleString()}`}
           icon={<FiPieChart className="text-green-400" />}
           color="from-emerald-500/20 to-teal-600/20"
         />
@@ -301,12 +301,12 @@ const BudgetPageContent = () => {
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
                         <span className="text-gray-400">Limit</span>
-                        <span className="font-semibold">₹{budget.limit.toLocaleString()}</span>
+                        <span className="font-semibold">${budget.limit.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-400">Spent</span>
                         <span className={`font-semibold ${percentage >= 100 ? 'text-red-400' : 'text-white'}`}>
-                          ₹{budget.spent.toLocaleString()}
+                          ${budget.spent.toLocaleString()}
                         </span>
                       </div>
                       <div>
@@ -336,11 +336,11 @@ const BudgetPageContent = () => {
                       </div>
                     </div>
                     <div className="col-span-2">
-                      <p className="font-semibold">₹{budget.limit.toLocaleString()}</p>
+                      <p className="font-semibold">${budget.limit.toLocaleString()}</p>
                     </div>
                     <div className="col-span-2">
                       <p className={`font-semibold ${percentage >= 100 ? 'text-red-400' : 'text-white'}`}>
-                        ₹{budget.spent.toLocaleString()}
+                        ${budget.spent.toLocaleString()}
                       </p>
                     </div>
                     <div className="col-span-3">
@@ -442,7 +442,7 @@ const BudgetPageContent = () => {
               </div>
 
               <div>
-                <label className="block text-gray-400 mb-2 font-medium">Amount (₹)</label>
+                <label className="block text-gray-400 mb-2 font-medium">Amount ($)</label>
                 <input
                   type="number"
                   name="limit"
@@ -562,6 +562,3 @@ const BudgetPage = () => (
 );
 
 export default BudgetPage;
-
-
-  

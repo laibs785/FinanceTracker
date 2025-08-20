@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import {
   FiPieChart,
@@ -9,7 +8,6 @@ import {
   FiFilter,
   FiCalendar,
   FiDownload,
- 
   FiArrowUpRight,
   FiAlertTriangle,
   FiPlus   
@@ -133,10 +131,10 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <SummaryCard
             title="Total Balance"
-            value={`₹${data.totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}
+            value={`$${data.totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}
             icon={<FiDollarSign />}
             color="from-cyan-500 to-blue-600"
-            subText={`+₹${data.totalIncome.toLocaleString()} Income • -₹${data.totalExpenses.toLocaleString()} Expenses`}
+            subText={`+${data.totalIncome.toLocaleString()} Income • -${data.totalExpenses.toLocaleString()} Expenses`}
           />
 
           <SummaryCard
@@ -160,7 +158,7 @@ const Dashboard = () => {
             value={data.topCategory}
             icon={<FiCreditCard />}
             color="from-yellow-500 to-orange-600"
-            subText={`₹${data.totalExpenses.toFixed(2)} spent`}
+            subText={`$${data.totalExpenses.toFixed(2)} spent`}
           />
 
           <SummaryCard
@@ -276,7 +274,7 @@ const Dashboard = () => {
                           t.type === 'income' ? 'text-green-400' : 'text-red-400'
                         }`}
                       >
-                        {t.type === 'income' ? '+' : '-'}₹{t.amount.toLocaleString()}
+                        {t.type === 'income' ? '+' : '-'}${t.amount.toLocaleString()}
                       </p>
                       <FiArrowUpRight className="opacity-0 group-hover:opacity-100 text-cyan-400 ml-2 transition" />
                     </div>
@@ -307,7 +305,7 @@ const Dashboard = () => {
                       <div className="flex justify-between text-sm mb-1">
                         <span className="font-medium">{budget.category}</span>
                         <span className="text-gray-300">
-                          ₹{budget.spent.toLocaleString()}/₹{budget.limit.toLocaleString()}
+                          ${budget.spent.toLocaleString()}/${budget.limit.toLocaleString()}
                         </span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2 mb-1">
