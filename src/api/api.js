@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // ✅ Fixed: No spaces in baseURL
 const API = axios.create({
-  baseURL: 'http://localhost:8000/api', 
+   baseURL: 'https://financetrackerbackend-production-18c2.up.railway.app',
   withCredentials: false,
 });
 
